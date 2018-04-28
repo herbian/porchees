@@ -1,4 +1,4 @@
-<HTML><HEAD><TITLE></title></head>
+﻿<HTML><HEAD><TITLE></title></head>
 <SCRIPT LANGUAGE="JavaScript">
 <!-- Debut du script
 //Tic tac toc de 100 pixels par images, espacés de 4 pixels pour pieces
@@ -42,7 +42,7 @@ if (i<16 && go==1) {
 ( mns==1 && tabl[16]==tabl[i]+1) || 
 tabl[16]==tabl[i]+4 || tabl[16]==tabl[i]-4
 	) {
-	soundme.play();
+	soundme.src="honk.mp3";
 	pr=tabl[16];
 	tabl[16]=tabl[i];
 	tabl[i]=pr;
@@ -99,7 +99,7 @@ tabl[16]==tabl[i]+4 || tabl[16]==tabl[i]-4
 -->
 </script>
 <BODY onLoad="mele();">
-	<AUDIO id="soundme"><SOURCE src="honk.wav"></AUDIO>
+	<AUDIO id="soundme" autoplay><SOURCE src="honk.mp3"></AUDIO>
 <img name="1" src="image1.gif" style="position:absolute;z-index:1;" onClick="swaps(this);">
 <img name="2" src="image2.gif" style="position:absolute;z-index:1;" onClick="swaps(this);">
 <img name="3" src="image3.gif" style="position:absolute;z-index:1;" onClick="swaps(this);">
