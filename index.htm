@@ -42,7 +42,7 @@ if (i<16 && go==1) {
 ( mns==1 && tabl[16]==tabl[i]+1) || 
 tabl[16]==tabl[i]+4 || tabl[16]==tabl[i]-4
 	) {
-	soundme.src="honk.wav";
+	soundme.play();
 	pr=tabl[16];
 	tabl[16]=tabl[i];
 	tabl[i]=pr;
