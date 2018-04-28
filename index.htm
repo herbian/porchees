@@ -1,7 +1,7 @@
 <HTML><HEAD><TITLE></title></head>
 <SCRIPT LANGUAGE="JavaScript">
 <!-- Debut du script
-//Tic tac toc de 100 pixels par images, espacés de 4 pixels pour pieces
+//Tic tac toc de 100 pixels par images, espacÃ©s de 4 pixels pour pieces
 var tabl=new Array(17);
 var x=new Array(17);
 var y=new Array(17);
@@ -27,7 +27,7 @@ y[i]=333;
 }
 function finish(){
 document.images[15].src="image17.gif"
-prompt('Vous avez reussi le puzzle, greatings, félicitations, bonne continuation...');
+prompt('Vous avez reussi le puzzle, greatings, fÃ©licitations, bonne continuation...');
 }
 
 function swaps(casse) {
@@ -46,7 +46,7 @@ tabl[16]==tabl[i]+4 || tabl[16]==tabl[i]-4
 	pr=tabl[16];
 	tabl[16]=tabl[i];
 	tabl[i]=pr;
-	//window.status=16+"à"+tabl[16]+"-"+i+"à"+tabl[i];
+	//window.status=16+"Ã "+tabl[16]+"-"+i+"Ã "+tabl[i];
 	casse.style.posLeft = eval(x[tabl[i]]);
 	casse.style.posTop = y[tabl[i]];
 	//window.status=x[tabl[i]]+"-"+y[tabl[i]]+"_"+x[tabl[16]]+"-"+y[tabl[16]];
@@ -99,7 +99,7 @@ tabl[16]==tabl[i]+4 || tabl[16]==tabl[i]-4
 -->
 </script>
 <BODY onLoad="mele();">
-	<BGSOUND id="soundme" src="">
+	<BGSOUND id="soundme" src="honk.wavv">
 <img name="1" src="image1.gif" style="position:absolute;z-index:1;" onClick="swaps(this);">
 <img name="2" src="image2.gif" style="position:absolute;z-index:1;" onClick="swaps(this);">
 <img name="3" src="image3.gif" style="position:absolute;z-index:1;" onClick="swaps(this);">
