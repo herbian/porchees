@@ -5,37 +5,31 @@
 var tabl=new Array(17);
 var x=new Array(17);
 var y=new Array(17);
-var taille=100;
-var bord=4;
-var gbord=14;
-var gauche=50;
-var haut=25;
-
 for (i=0;i<5;i++) {
 tabl[i]=i;
-x[i]=-taille-bord+gauche+i*(taille+bord);
-y[i]=haut;
+x[i]=(i)*100+4*i;
+y[i]=21;
 }
 for (i=5;i<9;i++) {
 tabl[i]=i;
-x[i]=-taille-bord+gauche+(i-4)*(taille+bord);
-y[i]=haut+bord+taille;
+x[i]=(i-4)*100+4*(i-4);
+y[i]=125;
 }
 for (i=9;i<13;i++) {
 tabl[i]=i;
-x[i]=-taille-bord+gauche+(i-8)*(taille+bord);
-y[i]=haut+2*(bord+taille);
+x[i]=(i-8)*100+4*(i-8);
+y[i]=229;
 }
 for (i=13;i<17;i++) {
 tabl[i]=i;
-x[i]=-taille-bord+gauche+(i-12)*(taille+bord);
-y[i]=haut+3*(bord+taille);
+x[i]=(i-12)*100+4*(i-12);
+y[i]=333;
 }
 function finish(){
 document.images[15].src="image17.gif"
-go=0;
 prompt('Vous avez reussi le puzzle, greatings, félicitations, bonne continuation...');
 }
+
 function swaps(casse) {
 var pr,xs,ys,fin,pls,mns;
 var i=eval(casse.name);
@@ -78,10 +72,8 @@ var z,i,casse,pr,pls,mns;
 go=1;
 for (z=1;z<1000;z++){
 i=Math.ceil(15*Math.random());
-
-document.images[16].style.posLeft= gauche-gbord;
-document.images[16].style.posTop= haut-gbord;
-document.images[15].src="image16.gif";
+//window.status=i;
+//window.status="";
 
 pls=1;mns=1;
 if (i<16 && i>0) {
@@ -102,10 +94,12 @@ tabl[16]==tabl[i]+4 || tabl[16]==tabl[i]-4
 	document.images[i].style.posLeft= x[tabl[(i+1)]];
 	document.images[i].style.posTop= y[tabl[(i+1)]];
 	}
+
 }		
 -->
 </script>
-<BODY onLoad="mele();" bgcolor="#C0C0C0">
+<BODY onLoad="mele();">
+	<BGSOUND id="soundme" src="">
 <img name="1" src="image1.gif" style="position:absolute;z-index:1;" onClick="swaps(this);">
 <img name="2" src="image2.gif" style="position:absolute;z-index:1;" onClick="swaps(this);">
 <img name="3" src="image3.gif" style="position:absolute;z-index:1;" onClick="swaps(this);">
@@ -122,13 +116,21 @@ tabl[16]==tabl[i]+4 || tabl[16]==tabl[i]-4
 <img name="14" src="image14.gif" style="position:absolute;z-index:1;" onClick="swaps(this);">
 <img name="15" src="image15.gif" style="position:absolute;z-index:1;" onClick="swaps(this);">
 <img name="16" src="image16.gif" style="position:absolute;z-index:2;" onClick="">
-<img name="17" src="cadre.gif" style="position:absolute;top:7;left:90;" onClick="">
-<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
 
-<div style="{position:absolute;top:20;left:560;cursor=hand}" onClick="mele();"><H1><B>Melange</div>
+<img name="17" src="cadre1.gif" style="position:absolute;top:7;left:90;z-index=2;">
+<img name="18" src="cadre2.gif" style="position:absolute;top:116;left:90;z-index=2;">
+<img name="19" src="cadre2.gif" style="position:absolute;top:220;left:90;z-index=2;">
+<img name="20" src="cadre2.gif" style="position:absolute;top:324;left:90;z-index=2;">
+<img name="21" src="cadre3.gif" style="position:absolute;top:428;left:90;z-index=2;">
 
-<BGSOUND id="soundme" src="">
+<img name="22" src="cadre1b.gif" style="position:absolute;top:7;left:90;z-index=2;">
+<img name="23" src="cadre2b.gif" style="position:absolute;top:7;left:198;z-index=2;">
+<img name="24" src="cadre2b.gif" style="position:absolute;top:7;left:302;z-index=2;">
+<img name="25" src="cadre2b.gif" style="position:absolute;top:7;left:406;z-index=2;">
+<img name="26" src="cadre3b.gif" style="position:absolute;top:7;left:511;z-index=2;">
 
+
+<div style="position:absolute;top:20;left:560;"onClick="mele();">Melange</div>
 </body>
 
 </html>
